@@ -1,11 +1,7 @@
-<?php
-
-include "server/function.php";
-
-?>
-
-
 <!DOCTYPE html>
+<?php
+require "server/functions.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +18,7 @@ include "server/function.php";
     <div class="row">
         <div class="col-12 no-padding">
             <nav class="navbar navbar-light bg-light navbar-expand-sm fixed-top">
-                <a class="navbar-brand" href="index.html"><img src="media/logo.png" width="175" height="50" alt="logo">
+                <a class="navbar-brand" href="index.php"><img src="media/logo.png" width="175" height="50" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse"
@@ -37,7 +33,7 @@ include "server/function.php";
                                        id="search-bar" name="search"
                                        placeholder="Find Mobile Phones, Laptops, and more..">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-lg" type="button"><i class="fas fa-search"></i></button>
+                                    <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -71,7 +67,7 @@ include "server/function.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php getcats(); ?> 
+                    <?php getCats(); ?>
                 </ul>
             </li>
             <li class="active">
@@ -80,18 +76,7 @@ include "server/function.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a class="nav-link" href="#">Apple</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Sony</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Dell</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Toshiba</a>
-                    </li>
+                    <?php getBrands(); ?>
                 </ul>
             </li>
             <li>
@@ -111,9 +96,7 @@ include "server/function.php";
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
-            <div class="col">
-                Content
-            </div>
+                <?php getPro(); ?>
         </div>
     </article>
 
